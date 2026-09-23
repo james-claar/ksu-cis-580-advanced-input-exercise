@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using CIS580.Input;
 
 namespace AdvancedInputExercise;
 
@@ -15,12 +16,16 @@ public class AdvancedInputExampleGame : Game
         _graphics = new GraphicsDeviceManager(this);
         Content.RootDirectory = "Content";
         IsMouseVisible = true;
+
+        InputState inputState = new InputState(this);
+        Components.Add(inputState);
+        Services.AddService<IInputState>(inputState);
     }
 
     protected override void Initialize()
     {
         // TODO: Add your initialization logic here
-        _knight = new Knight();
+        _knight = new Knight(this);
 
         base.Initialize();
     }

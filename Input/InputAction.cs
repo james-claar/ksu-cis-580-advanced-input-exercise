@@ -46,7 +46,7 @@ public class InputAction
     /// <param name="controllingPlayer">The player who is controlling the input</param>
     /// <param name="playerIndex">The index of the player who triggered the input</param>
     /// <returns>True if the input action has occurred, false otherwise</returns>
-    public bool Occured(InputState inputState, PlayerIndex? controllingPlayer, out PlayerIndex playerIndex)
+    public bool Occured(IInputState inputState, PlayerIndex? controllingPlayer, out PlayerIndex playerIndex)
     {
         ButtonPress buttonTest;
         KeyPress keyTest;

@@ -6,7 +6,7 @@ using Microsoft.Xna.Framework.Input;
 
 namespace CIS580.Input;
 
-public class InputState 
+public class InputState : GameComponent, IInputState
 {
     // The default maximum number of player devices
     // Typically 4 controllers
@@ -28,18 +28,20 @@ public class InputState
     /// <summary>
     /// Initializes a new instance of the InputState class.
     /// </summary>
-    public InputState()
+    public InputState(Game game): base(game)
     {
         CurrentGamePadStates = new GamePadState[MaxInputs];
         _priorGamePadStates = new GamePadState[MaxInputs];
-        
+
         GamePadWasConnected = new bool[MaxInputs];
+
+        UpdateOrder = 0;
     }
 
     /// <summary>
     /// Updates the input state for the current frame.
     /// </summary>
-    public void Update()
+    public override void Update(GameTime gameTime)
     {
         for (var i = 0; i < MaxInputs; i++)
         {

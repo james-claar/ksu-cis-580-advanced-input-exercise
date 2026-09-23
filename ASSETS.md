@@ -1,0 +1,3 @@
+Fantasy Knight spritesheets (_Fall.png, _Idle.png, _Jump.png, _Run.png) created by [aamatniekss and available on itch.io](https://aamatniekss.itch.io/fantasy-knight-free-pixelart-animated-character) under the following license: 
+
+> LICENSE: This asset pack can be used in both free and commercial projects. You can modify it to suit your own needs. Credit is not necessary, but highly appreciated.  You may not redistribute  or resell the assets on their own, that includes NFTs, just images, or asset compilations. The assets can't be used in AI creations.
